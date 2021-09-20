@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Max4Min"
+        xmlns:props="clr-namespace:Max4Min.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="200" Width="500">
     <Grid>
@@ -31,14 +32,14 @@
             </Button>
         </Grid>
         <CheckBox Grid.Row="1"
-                  x:Name="CheckBoxHookWhenStart"
-                  Click="CheckBoxHookWhenStart_Click"
+                  IsChecked="{Binding Source={x:Static props:Settings.Default},Path=HookWhenStart,Mode=TwoWay}"
                   Margin="10 0 10 10">
             Hook when start
         </CheckBox>
         <CheckBox Grid.Row="2"
                   x:Name="CheckBoxStartWhenStartUp"
                   Click="CheckBoxStartWhenStartUp_Click"
+                  IsChecked="{Binding Source={x:Static props:Settings.Default},Path=StartWhenStartUp,Mode=TwoWay}"
                   Margin="10 0 10 10">
             Start when start up
         </CheckBox>

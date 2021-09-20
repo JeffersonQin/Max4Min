@@ -17,6 +17,7 @@ namespace Max4Min
         {
             base.OnExit(e);
             Runtime.UnHook();
+            Max4Min.Properties.Settings.Default.Save();
         }
     }
 }

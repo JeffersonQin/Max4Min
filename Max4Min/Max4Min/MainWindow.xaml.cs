@@ -10,6 +10,7 @@ namespace Max4Min
         public MainWindow()
         {
             InitializeComponent();
+            if (Properties.Settings.Default.HookWhenStart) Runtime.Hook();
         }
 
         private void ButtonHook_Click(object sender, RoutedEventArgs e)
@@ -21,11 +22,6 @@ namespace Max4Min
         private void ButtonUnHook_Click(object sender, RoutedEventArgs e)
         {
             Runtime.UnHook();
-        }
-
-        private void CheckBoxHookWhenStart_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void CheckBoxStartWhenStartUp_Click(object sender, RoutedEventArgs e)
