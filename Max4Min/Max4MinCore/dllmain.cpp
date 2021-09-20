@@ -65,15 +65,17 @@ bool InstallCBTHook()
 
         if (g_hCBTHook)
         {
-            OutputDebugStringA("Hook CBT succeed\n");
+            DEBUG(OutputDebugStringA("Hook CBT succeed\n"));
             return true;
         }
         else
         {
-            DWORD dwError = GetLastError();
-            char szError[MAX_PATH];
-            _snprintf_s(szError, MAX_PATH, "Hook CBT failed, error = %u\n", dwError);
-            OutputDebugStringA(szError);
+            DEBUG({
+                DWORD dwError = GetLastError();
+                char szError[MAX_PATH];
+                _snprintf_s(szError, MAX_PATH, "Hook CBT failed, error = %u\n", dwError);
+                OutputDebugStringA(szError);
+            })
         }
     }
 
@@ -86,9 +88,8 @@ bool UninstallCBTHook()
     {
         UnhookWindowsHookEx(g_hCBTHook);
         g_hCBTHook = NULL;
-        OutputDebugStringA("Uninstall CBT Hook\n");
+        DEBUG(OutputDebugStringA("Uninstall CBT Hook\n"));
     }
-
     return true;
 }
 
