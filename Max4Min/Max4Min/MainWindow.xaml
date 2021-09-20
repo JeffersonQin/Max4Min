@@ -5,8 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Max4Min"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="200" Width="500">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="ButtonHook"
+                    Margin="10"
+                    Grid.Column="0"
+                    Click="ButtonHook_Click">
+                Hook
+            </Button>
+            <Button x:Name="ButtonUnHook"
+                    Margin="10"
+                    Grid.Column="1"
+                    Click="ButtonUnHook_Click">
+                UnHook
+            </Button>
+        </Grid>
+        <CheckBox Grid.Row="1"
+                  x:Name="CheckBoxHookWhenStart"
+                  Click="CheckBoxHookWhenStart_Click"
+                  Margin="10 0 10 10">
+            Hook when start
+        </CheckBox>
+        <CheckBox Grid.Row="2"
+                  x:Name="CheckBoxStartWhenStartUp"
+                  Click="CheckBoxStartWhenStartUp_Click"
+                  Margin="10 0 10 10">
+            Start when start up
+        </CheckBox>
     </Grid>
 </Window>
