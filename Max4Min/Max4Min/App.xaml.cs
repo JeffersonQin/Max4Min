@@ -3,9 +3,6 @@ using System.Windows;
 
 namespace Max4Min
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
         public static TaskbarIcon taskbarIcon;
