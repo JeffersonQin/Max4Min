@@ -49,7 +49,7 @@
 ├── Max4MinCoreRuntimeUnHook-x64.exe
 └── <.net target>
     ├── ...
-	└── Max4Min.exe
+    └── Max4Min.exe
 ```
 
 请执行 `<.net target>/Max4Min.exe` 来启动，其他都是支持文件。
