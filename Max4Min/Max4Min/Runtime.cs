@@ -6,7 +6,7 @@ namespace Max4Min
 {
     public static class Runtime
     {
-        private static string baseDir = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../"));
+        private static string baseDir = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase, "../"));
 
         public static void Hook()
         {
