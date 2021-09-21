@@ -25,14 +25,8 @@ namespace Max4Min
             shortcut.Save();
         }
 
-        public static void CreateStartupShortcut()
-        {
-            CreateShortcut(startupShortcut);
-        }
+        public static void CreateStartupShortcut() { CreateShortcut(startupShortcut); }
 
-        public static void DeleteStartupShortcut()
-        {
-            if (File.Exists(startupShortcut)) File.Delete(startupShortcut);
-        }
+        public static void DeleteStartupShortcut() { if (File.Exists(startupShortcut)) File.Delete(startupShortcut); }
     }
 }
