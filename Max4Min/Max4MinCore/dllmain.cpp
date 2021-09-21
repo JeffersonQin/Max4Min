@@ -75,7 +75,7 @@ bool InstallCBTHook()
                 char szError[MAX_PATH];
                 _snprintf_s(szError, MAX_PATH, "Hook CBT failed, error = %u\n", dwError);
                 OutputDebugStringA(szError);
-            })
+            });
         }
     }
 
