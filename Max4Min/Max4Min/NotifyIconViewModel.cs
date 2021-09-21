@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 
@@ -22,9 +23,7 @@ namespace Max4Min
 
     public class NotifyIconViewModel
     {
-        public ICommand ShowWindowCommand { get { return new DelegateCommand { CommandAction = () => Application.Current.MainWindow.Activate() }; } }
-
-        public ICommand HideWindowCommand { get { return new DelegateCommand { CommandAction = () => Application.Current.MainWindow.Hide() }; } }
+        public ICommand ShowWindowCommand { get { return new DelegateCommand { CommandAction = () => Application.Current.MainWindow.Show() }; } }
 
         public ICommand ExitApplicationCommand { get { return new DelegateCommand { CommandAction = () => Application.Current.Shutdown() }; } }
     }

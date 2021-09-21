@@ -8,6 +8,8 @@ namespace Max4Min
         {
             InitializeComponent();
             if (Properties.Settings.Default.HookWhenStart) Runtime.Hook();
+            Closing += (sender, e) => { Hide(); e.Cancel = true; };
+            StateChanged += (sender, e) => { if (WindowState == WindowState.Minimized) { WindowState = WindowState.Normal; Hide(); } };
         }
 
         private void ButtonHook_Click(object sender, RoutedEventArgs e)

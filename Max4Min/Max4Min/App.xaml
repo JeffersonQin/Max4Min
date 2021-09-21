@@ -7,8 +7,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ContextMenu x:Shared="false" x:Key="SysTrayMenu">
-            <MenuItem Header="Hide" Command="{Binding ShowWindowCommand}" />
-            <MenuItem Header="Show" Command="{Binding HideWindowCommand}" />
+            <MenuItem Header="Show" Command="{Binding ShowWindowCommand}" />
             <Separator />
             <MenuItem Header="Exit" Command="{Binding ExitApplicationCommand}" />
         </ContextMenu>
