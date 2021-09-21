@@ -26,7 +26,8 @@ namespace Max4Min
 
         private void CheckBoxStartWhenStartUp_Click(object sender, RoutedEventArgs e)
         {
-
+            if ((bool)CheckBoxStartWhenStartUp.IsChecked) Shortcut.CreateStartupShortcut();
+            else Shortcut.DeleteStartupShortcut();
         }
     }
 }
