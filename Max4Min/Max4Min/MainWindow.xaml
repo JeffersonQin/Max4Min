@@ -6,8 +6,11 @@
         xmlns:local="clr-namespace:Max4Min"
         xmlns:props="clr-namespace:Max4Min.Properties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="500">
+        Title="Max4Min by gyro永不抽风; background: pixiv#77734148" Height="280" Width="520">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Assets/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
@@ -20,12 +23,14 @@
             </Grid.ColumnDefinitions>
             <Button x:Name="ButtonHook"
                     Margin="10"
+                    Opacity="0.6"
                     Grid.Column="0"
                     Click="ButtonHook_Click">
                 Hook
             </Button>
             <Button x:Name="ButtonUnHook"
                     Margin="10"
+                    Opacity="0.6"
                     Grid.Column="1"
                     Click="ButtonUnHook_Click">
                 UnHook
@@ -33,6 +38,7 @@
         </Grid>
         <CheckBox Grid.Row="1"
                   IsChecked="{Binding Source={x:Static props:Settings.Default},Path=HookWhenStart,Mode=TwoWay}"
+                  Foreground="White"
                   Margin="10 0 10 10">
             Hook when start
         </CheckBox>
@@ -40,6 +46,7 @@
                   x:Name="CheckBoxStartWhenStartUp"
                   Click="CheckBoxStartWhenStartUp_Click"
                   IsChecked="{Binding Source={x:Static props:Settings.Default},Path=StartWhenStartUp,Mode=TwoWay}"
+                  Foreground="White"
                   Margin="10 0 10 10">
             Start when start up
         </CheckBox>

@@ -20,6 +20,14 @@
   	<OutputPath>$(SolutionDir)$(Configuration)\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Assets\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\background.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Update="Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>
