@@ -10,6 +10,7 @@ namespace Max4Min
             if (Properties.Settings.Default.HookWhenStart) Runtime.Hook();
             Closing += (sender, e) => { Hide(); e.Cancel = true; };
             StateChanged += (sender, e) => { if (WindowState == WindowState.Minimized) { WindowState = WindowState.Normal; Hide(); } };
+            if (Properties.Settings.Default.StartWhenStartUp) Shortcut.CreateStartupShortcut();
         }
 
         private void ButtonHook_Click(object sender, RoutedEventArgs e)
